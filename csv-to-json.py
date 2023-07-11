@@ -18,7 +18,7 @@ def convert_csv_to_json(csv_file):
     json_file = file_name + ".json"
 
     # Read the CSV file using pandas with semicolon delimiter
-    data_frame = pd.read_csv(csv_file, delimiter=";")
+    data_frame = pd.read_csv(csv_file, delimiter=",")
 
     # Convert the data frame to JSON format with 4-indentation and Unicode support
     json_data = data_frame.to_json(orient="records", indent=4, force_ascii=False)
